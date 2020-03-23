@@ -62,7 +62,7 @@
     :else (seq [v])))
 
 (defn- constantize-keyword [k]
-  (.. (name k) (toUpperCase) (replace "-" "_")))
+  (.. (name k) (toUpperCase java.util.Locale/ENGLISH) (replace "-" "_")))
 
 (defn constant-map
   "Given a class and a list of keywordized constant names returns the
@@ -90,7 +90,7 @@
 (defn camelize
   "Convert input string to camelCase from hyphen-case"
   [s]
-  (clojure.string/replace s #"-(.)" #(.toUpperCase ^String (%1 1))))
+  (clojure.string/replace s #"-(.)" #(.toUpperCase ^String (%1 1) java.util.Locale/ENGLISH)))
 
 (defn boolean?
   "Return true if b is exactly true or false. Useful for handling optional
