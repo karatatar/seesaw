@@ -1,0 +1,10 @@
+{:paths ["src" "target/classes"],
+ :deps
+ {org.clojure/clojure #:mvn{:version "1.4.0"},
+  com.miglayout/miglayout #:mvn{:version "3.7.4"},
+  com.jgoodies/forms #:mvn{:version "1.2.1"},
+  org.swinglabs.swingx/swingx-core #:mvn{:version "1.6.3"},
+  j18n #:mvn{:version "1.0.2"},
+  com.fifesoft/rsyntaxtextarea #:mvn{:version "2.5.6"}},
+ :mvn/repos
+ {"stuartsierra-releases" {:url "https://stuartsierra.com/maven2"}}}
